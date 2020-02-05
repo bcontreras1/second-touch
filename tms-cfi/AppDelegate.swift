@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  tms-cfi
 //
-//  Created by Brenda Contreras on 1/18/19. New
+//  Created by Brenda Contreras on 1/18/19. 
 //  Copyright © 2019 Brenda Contreras. All rights reserved.
 //
 
