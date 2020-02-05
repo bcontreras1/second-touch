@@ -14,6 +14,9 @@
 		278DB67C21F26BA400FC0EBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278DB67A21F26BA400FC0EBD /* LaunchScreen.storyboard */; };
 		278DB68721F26BA400FC0EBD /* tms_cfiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278DB68621F26BA400FC0EBD /* tms_cfiTests.swift */; };
 		278DB69221F26BA400FC0EBD /* tms_cfiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278DB69121F26BA400FC0EBD /* tms_cfiUITests.swift */; };
+		27B6BC7221F3D61F00C108BF /* DatabaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6BC7121F3D61F00C108BF /* DatabaseViewController.swift */; };
+		27B6BC7821F3DC7C00C108BF /* DatabaseViewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B6BC7721F3DC7C00C108BF /* DatabaseViewStoryboard.storyboard */; };
+		27B6BC7A21F67AA900C108BF /* BarcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6BC7921F67AA900C108BF /* BarcodeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,10 @@
 		278DB68D21F26BA400FC0EBD /* tms-cfiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tms-cfiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		278DB69121F26BA400FC0EBD /* tms_cfiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tms_cfiUITests.swift; sourceTree = "<group>"; };
 		278DB69321F26BA400FC0EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27B6BC7121F3D61F00C108BF /* DatabaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseViewController.swift; sourceTree = "<group>"; };
+		27B6BC7321F3D93500C108BF /* tms-cfi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tms-cfi-Bridging-Header.h"; sourceTree = "<group>"; };
+		27B6BC7721F3DC7C00C108BF /* DatabaseViewStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DatabaseViewStoryboard.storyboard; sourceTree = "<group>"; };
+		27B6BC7921F67AA900C108BF /* BarcodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +107,13 @@
 				278DB67121F26BA200FC0EBD /* AppDelegate.swift */,
 				278DB67321F26BA200FC0EBD /* ViewController.swift */,
 				278DB67521F26BA200FC0EBD /* Main.storyboard */,
+				27B6BC7721F3DC7C00C108BF /* DatabaseViewStoryboard.storyboard */,
 				278DB67821F26BA400FC0EBD /* Assets.xcassets */,
 				278DB67A21F26BA400FC0EBD /* LaunchScreen.storyboard */,
 				278DB67D21F26BA400FC0EBD /* Info.plist */,
+				27B6BC7121F3D61F00C108BF /* DatabaseViewController.swift */,
+				27B6BC7321F3D93500C108BF /* tms-cfi-Bridging-Header.h */,
+				27B6BC7921F67AA900C108BF /* BarcodeViewController.swift */,
 			);
 			path = "tms-cfi";
 			sourceTree = "<group>";
@@ -193,13 +204,16 @@
 				TargetAttributes = {
 					278DB66D21F26BA200FC0EBD = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 					};
 					278DB68121F26BA400FC0EBD = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 						TestTargetID = 278DB66D21F26BA200FC0EBD;
 					};
 					278DB68C21F26BA400FC0EBD = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 						TestTargetID = 278DB66D21F26BA200FC0EBD;
 					};
 				};
@@ -232,6 +246,7 @@
 				278DB67C21F26BA400FC0EBD /* LaunchScreen.storyboard in Resources */,
 				278DB67921F26BA400FC0EBD /* Assets.xcassets in Resources */,
 				278DB67721F26BA200FC0EBD /* Main.storyboard in Resources */,
+				27B6BC7821F3DC7C00C108BF /* DatabaseViewStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +271,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27B6BC7221F3D61F00C108BF /* DatabaseViewController.swift in Sources */,
+				27B6BC7A21F67AA900C108BF /* BarcodeViewController.swift in Sources */,
 				278DB67421F26BA200FC0EBD /* ViewController.swift in Sources */,
 				278DB67221F26BA200FC0EBD /* AppDelegate.swift in Sources */,
 			);
@@ -432,15 +449,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 832A5K5YHH;
 				INFOPLIST_FILE = "tms-cfi/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "tms.tms-cfi";
+				PRODUCT_BUNDLE_IDENTIFIER = "alcondts.tms-cfi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_OBJC_BRIDGING_HEADER = "tms-cfi/tms-cfi-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -449,15 +470,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 832A5K5YHH;
 				INFOPLIST_FILE = "tms-cfi/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "tms.tms-cfi";
+				PRODUCT_BUNDLE_IDENTIFIER = "alcondts.tms-cfi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_OBJC_BRIDGING_HEADER = "tms-cfi/tms-cfi-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -476,7 +500,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "tms.tms-cfiTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tms-cfi.app/tms-cfi";
 			};
@@ -496,7 +520,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "tms.tms-cfiTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tms-cfi.app/tms-cfi";
 			};
@@ -515,7 +539,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "tms.tms-cfiUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "tms-cfi";
 			};
@@ -534,7 +558,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "tms.tms-cfiUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "tms-cfi";
 			};
